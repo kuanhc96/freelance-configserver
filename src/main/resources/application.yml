@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:kuanhc96/freelance-configfiles.git
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+server:
+  port: 8071
