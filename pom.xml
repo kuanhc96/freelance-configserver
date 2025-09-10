@@ -47,7 +47,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-monitor</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -71,6 +70,21 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.3.2</version>
+				<configuration>
+					<from>
+						<image>
+							azul/zulu-openjdk:21.0.8
+						</image>
+					</from>
+					<to>
+						<image>kuanskchen344/${project.artifactId}:garmin</image>
+					</to>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
