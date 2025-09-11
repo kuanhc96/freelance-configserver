@@ -2,7 +2,7 @@ spring:
   application:
     name: configserver
   profiles:
-    active: git
+    active: git,test,qa,prod
   cloud:
     config:
       server:
@@ -15,7 +15,7 @@ spring:
           ignore-local-ssh-settings: true
 #         prvk: | <pvrk>
   rabbitmq:
-    host: localhost
+    host: rabbit
     port: 5672
     username: guest
     password: guest
