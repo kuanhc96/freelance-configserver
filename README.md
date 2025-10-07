@@ -1,7 +1,9 @@
 # freelance-configserver
 ## Connection to configfiles repo
 - The connection relies on SSH authentication. The SSH key is encrypted and the program will require the encription password to decrypt it at startup.
-- provide the environment variable, `ENCRYPT_KEY`
+- provide the environment variables:
+  - `ENCRYPT_KEY`
+  - `PRIVATE_KEY` (remember to add the {cipher} clause before the actual private key)
 ## Profile information
 
 ### git,dev

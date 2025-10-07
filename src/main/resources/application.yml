@@ -15,7 +15,7 @@ spring:
           clone-on-start: true
           force-pull: true
           ignore-local-ssh-settings: true
-#         prvk: | <pvrk>
+          private-key: ${PRIVATE_KEY}
   rabbitmq:
     host: rabbit
     port: 5672
@@ -40,4 +40,4 @@ management:
 server:
   port: 8071
 encrypt:
-  key: abcdefghijklmnop
+  key: ${ENCRYPT_KEY}
